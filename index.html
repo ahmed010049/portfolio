@@ -1,158 +1,178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ahmed Ibrahim Ali — Portfolio & Resume</title>
-  <style>
-    :root{
-      --bg:#0b1220; --card:#07101a; --muted:#9fb0c9; --accent:#06b6d4;
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
-      --ff: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:var(--ff);
-      background:linear-gradient(180deg,#020617 0%, #07151f 100%);
-      color:#e6eef6;-webkit-font-smoothing:antialiased}
-    a{color:var(--accent); text-decoration:none}
-    .container{max-width:1080px;margin:28px auto;padding:20px}
-    header{display:flex;gap:16px;align-items:center}
-    .brand{display:flex;flex-direction:column}
-    .brand h1{margin:0;font-size:22px;letter-spacing:0.5px}
-    .brand p{margin:2px 0 0;font-size:14px;color:var(--muted)}
-    nav{margin-left:auto}
-    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
-    nav a{padding:8px 12px;border-radius:10px;font-weight:600}
-    nav a:hover{background:linear-gradient(90deg, rgba(6,182,212,0.08), rgba(96,165,250,0.04))}
-    .card{background:var(--card);border-radius:var(--radius);padding:24px;margin-top:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center}
-    .intro h2{margin:0;font-size:28px}
-    .intro p.lead{color:var(--muted);margin:10px 0 18px;line-height:1.5}
-    .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#07101a;padding:10px 14px;border-radius:10px;font-weight:700}
-    .ghost{border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:var(--muted)}
-    .side-card{background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);padding:18px;border-radius:12px}
-    .meta{font-size:13px;color:var(--muted);margin-top:6px}
-    section{margin-top:22px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-    .tag{background:var(--glass);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted)}
-    .experience .item{margin-bottom:14px}
-    .pdf-embed{width:100%;height:70vh;border-radius:10px;border:0;display:block;margin-top:12px}
-    footer{margin-top:28px;padding:14px 8px;text-align:center;color:var(--muted);font-size:13px}
-    @media (max-width:920px){
-      .hero{grid-template-columns:1fr}
-      .side-card{order:2}
-      .pdf-embed{height:60vh}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Ibrahim Ali - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-pattern {
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity=".1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 30v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 34v-4h-2v4H6v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4H6v2h4v4h2V6h4V4h-4zm0 30v-4h-2v4H6v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <h1>Ahmed Ibrahim Ali</h1>
-        <p>SOC Analyst — Level 1</p>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<body class="bg-gray-950 text-gray-100">
+
+    <!-- Header Section -->
+    <header class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center rounded-xl bg-gray-900 shadow-lg mt-4">
+        <div class="text-2xl font-bold text-gray-100 mb-4 sm:mb-0">Ahmed Ibrahim Ali</div>
+        <nav class="space-x-4 sm:space-x-6">
+            <a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a>
+            <a href="#experience" class="text-gray-400 hover:text-white transition-colors duration-300">Experience</a>
+            <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors duration-300">Contact Me</a>
+        </nav>
     </header>
 
-    <main class="card">
-      <div class="hero">
-        <div class="intro">
-          <h2>Hello, I’m Ahmed Ibrahim Ali</h2>
-          <p class="lead">
-            I work as a SOC Level 1 Analyst. I monitor, analyze, and triage alerts as the first line of defense, escalating real threats to higher teams when necessary.
-          </p>
-          <div class="cta">
-            <a class="btn" href="#portfolio">View Portfolio</a>
-            <a class="ghost" href="portfolio.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
-          </div>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 my-12">
 
-          <section id="about">
-            <h3>About Me</h3>
-            <p style="color:var(--muted);line-height:1.6">
-              I am a Computer and Communication student with a passion for cybersecurity, especially offensive security.  
-              I enjoy hands-on labs, solving challenges, and continuously improving my skills in SOC operations and penetration testing.
-            </p>
-          </section>
-
-          <section id="experience" class="experience">
-            <h3>Practical Experience</h3>
-
-            <div class="item">
-              <strong>SOC Level 1 (TryHackMe Labs)</strong>
-              <div class="meta">Hands-on Training</div>
-              <ul style="margin:8px 0 0 18px;color:var(--muted);line-height:1.6">
-                <li>Monitored and analyzed SIEM dashboards for suspicious activities.</li>
-                <li>Triage alerts (false positives vs. real incidents) and escalated complex cases.</li>
-                <li>Documented incidents and created investigation tickets.</li>
-                <li>Used threat intelligence to validate alerts.</li>
-              </ul>
+        <!-- Hero Section -->
+        <section class="text-center py-16 bg-gray-900 rounded-2xl shadow-xl bg-pattern">
+            <div class="mx-auto max-w-4xl">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+                    HELLO, I'M AHMED IBRAHIM ALI
+                </h1>
+                <p class="text-xl sm:text-2xl font-medium text-indigo-400 mb-6">
+                    SOC Analyst
+                </p>
+                <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-8">
+                    "I proactively monitor, analyze, and triage security alerts as the first line of defense, escalating real threats to keep systems safe."
+                </p>
+                <a href="#contact" class="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg">
+                    Work with Me
+                </a>
             </div>
+        </section>
 
-            <div class="item">
-              <strong>Pre-Security (TryHackMe)</strong>
-              <div class="meta">Foundations</div>
-              <ul style="margin:8px 0 0 18px;color:var(--muted);line-height:1.6">
-                <li>Learned basics of networking, Linux, and security fundamentals.</li>
-                <li>Practical labs with CLI, file permissions, and web security essentials.</li>
-              </ul>
+        <!-- About Me Section -->
+        <section id="about" class="mt-20">
+            <div class="bg-gray-900 rounded-2xl shadow-xl p-8 sm:p-12 lg:p-16">
+                <h2 class="text-3xl font-bold text-indigo-400 mb-6 border-b-2 border-indigo-500 pb-2 inline-block">ABOUT ME</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            "I am a Computer and Communication student with a strong passion for cybersecurity, particularly offensive security. My interest was sparked when I first watched Mr. Robot and was inspired by the way the main character approached hacking with creativity and precision."
+                        </p>
+                        <h3 class="text-2xl font-semibold text-white mb-4">What I Do</h3>
+                        <ul class="space-y-4 text-gray-400 text-base">
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-2 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                As a SOC Level 1 Analyst, I serve as the first line of defense by monitoring and analyzing security tools such as SIEM, IDS/IPS, EDR, and firewall logs to identify suspicious activities and anomalies.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-2 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                I perform initial triage of alerts to distinguish between false positives and true security incidents, while prioritizing them based on severity.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-2 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                For basic issues, I handle documentation and resolution, and for advanced or unclear cases, I escalate to SOC Level 2 or Incident Response teams.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-2 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                I also document all alerts, actions, and escalations through detailed incident tickets. In addition, I leverage threat intelligence to validate alerts and speed up detection of malicious activities, run initial checks on endpoints and user activity, and recommend immediate containment measures such as blocking IPs or disabling accounts when necessary.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Placeholder image that is related to Cybersecurity for the 'About Me' Section -->
+                    <div class="hidden md:block">
+                        <img src="https://placehold.co/600x400/1e293b/a5b4fc?text=Cybersecurity" alt="Cybersecurity illustration" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                </div>
             </div>
-          </section>
-        </div>
+        </section>
 
-        <aside class="side-card">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div style="width:72px;height:72px;border-radius:12px;background:linear-gradient(180deg,#0b1220,#081424);display:flex;align-items:center;justify-content:center;font-weight:700">AI</div>
-            <div>
-              <div style="font-weight:700">Ahmed Ibrahim</div>
-              <div class="meta">SOC Analyst — L1</div>
+        <!-- Work Experience Section -->
+        <section id="experience" class="mt-20">
+            <div class="bg-gray-900 rounded-2xl shadow-xl p-8 sm:p-12 lg:p-16">
+                <h2 class="text-3xl font-bold text-indigo-400 mb-6 border-b-2 border-indigo-500 pb-2 inline-block">My Work Experience</h2>
+                <div class="space-y-12">
+                    <div class="p-6 bg-gray-950 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Completed SOC Level 1 Pathway</h3>
+                        <p class="text-gray-400 italic mb-4">on TryHackMe with hands-on labs.</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Monitored and analyzed SIEM dashboards to detect suspicious activities and anomalies.</li>
+                            <li>Practiced triaging alerts, identifying false positives, and escalating true incidents.</li>
+                            <li>Documented incidents and created sample investigation tickets.</li>
+                            <li>Used threat intelligence to validate and enrich alerts.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-950 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Pre-Security (TryHackMe Pathway)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Gained foundational knowledge in networking, Linux, and security concepts.</li>
+                            <li>Practiced basic cybersecurity labs and simulations.</li>
+                            <li>Built skills in working with command line, file permissions, and web security essentials.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div style="margin-top:14px">
-            <div class="meta">Skills</div>
-            <div class="skills">
-              <span class="tag">SIEM Monitoring</span>
-              <span class="tag">Alert Triage</span>
-              <span class="tag">Threat Intel</span>
-              <span class="tag">Incident Docs</span>
-              <span class="tag">Linux / Networking</span>
+        <!-- Contact Me Section -->
+        <section id="contact" class="mt-20 text-center">
+            <div class="bg-gray-900 rounded-2xl shadow-xl p-8 sm:p-12 lg:p-16">
+                <h2 class="text-3xl font-bold text-indigo-400 mb-6 border-b-2 border-indigo-500 pb-2 inline-block">Contact Me</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+                    Feel free to reach out to me for collaborations, questions, or just to say hi!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="mailto:ahmed.@gmail.com" class="flex items-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        <span>ahmed.@gmail.com</span>
+                    </a>
+                    <a href="tel:+201004973050" class="flex items-center space-x-2 bg-gray-800 text-gray-300 px-6 py-3 rounded-full hover:bg-gray-700 transition-transform transform hover:scale-105 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.103 6.103l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        <span>(20) 1004973050</span>
+                    </a>
+                     <a href="https://www.linkedin.com/in/ahmed-ibrahim-7b14a4329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="flex items-center space-x-2 bg-gray-800 text-gray-300 px-6 py-3 rounded-full hover:bg-gray-700 transition-transform transform hover:scale-105 shadow-md">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                           <path d="M19.92 6.315c0 1.252-1.025 2.277-2.277 2.277-1.25 0-2.274-1.025-2.274-2.277 0-1.25 1.025-2.274 2.274-2.274 1.252 0 2.277 1.023 2.277 2.274zm-2.52 15.65h-4.32V10.23h4.32V21.975zM12 9.53a5.53 5.53 0 00-5.53-5.53c-3.045 0-5.53 2.485-5.53 5.53v12.445h4.32V10.23H12V9.53z" fill-rule="evenodd" />
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1yCvRg3ZTRyMtNdkW2OO6G0yyJ0gCRMgb/view?usp=sharing" download class="flex items-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L10 11.586l1.293-1.293a1 1 0 011.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div style="margin-top:14px" id="contact">
-            <div class="meta">Contact</div>
-            <div style="margin-top:8px;color:var(--muted);line-height:1.5">
-              <div>Email: yourmail@example.com</div>
-              <div>Phone: (+20) 100-000-0000</div>
-            </div>
-          </div>
-
-          <div style="margin-top:12px">
-            <a class="btn" href="portfolio.pdf" target="_blank" rel="noopener">Open Portfolio (PDF)</a>
-          </div>
-        </aside>
-      </div>
-
-      <section id="portfolio">
-        <h3>Portfolio</h3>
-        <p class="meta">My full resume and design portfolio in PDF format.</p>
-        <iframe class="pdf-embed" src="portfolio.pdf#view=FitH" title="Portfolio PDF"></iframe>
-      </section>
     </main>
 
-    <footer>
-      © 2025 Ahmed Ibrahim Ali — All Rights Reserved
+    <!-- Footer -->
+    <footer class="text-center py-6 mt-12 text-gray-500 text-sm">
+        <p>&copy; 2024 Ahmed Ibrahim Ali. All rights reserved.</p>
     </footer>
-  </div>
+
 </body>
 </html>
